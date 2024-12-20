@@ -1,0 +1,19 @@
+name: ascii
+on: push
+jobs:
+  ascii:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        run: actions/checkout@v4
+      - name: install
+        run: sudo apt-get install cowsay -y
+      - name: execute
+        run: cowsay -f dragon "Hello" >> dragon.txt
+      - name: test
+        run: grep -i "dragon" dragon.txt
+      - name: read
+        run: cat dragon.txt
+      - name: list
+        run: ls -lrta
+    
