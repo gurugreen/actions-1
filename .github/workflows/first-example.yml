@@ -7,8 +7,9 @@ jobs:
             - name: checkout
               uses: actions/checkout@v4
             - name: welcome
-              run: echo "welcome"
-            - name: list
-              run: ls
-            - name: read
-              run: cat README.md
+              run: |
+               echo "welcome"
+               ls
+               cat README.md
+            - name: cowsay
+              run: cowsay -f dragon "Hello" >> dragon.txt
