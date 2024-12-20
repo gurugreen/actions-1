@@ -9,7 +9,7 @@ jobs:
             - name: welcome
               run: |
                echo "welcome"
-               ls
+               ls -lrta
                cat README.md
             - name: cowsay
               run: cowsay -f dragon "Hello" >> dragon.txt
