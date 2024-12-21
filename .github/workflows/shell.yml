@@ -9,4 +9,6 @@ jobs:
         - name: list
           run: ls -lrta
         - name: executing shell
-          run: ./shell.sh
+          run: |
+            chmod +x shell.sh
+            ./shell.sh
