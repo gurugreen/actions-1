@@ -1,0 +1,12 @@
+name: shell
+on: push
+jobs:
+    shell:
+      runs-on: ubuntu-latest
+      steps:
+        - name: checkout repo
+          uses: actions/checkout@v4
+        - name: list
+          run: ls -lrta
+        - name: executing shell
+          run: ./shell.sh
